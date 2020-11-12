@@ -29,21 +29,22 @@ class ButtonActionListener implements ActionListener
         double prix;
         try
         {
-            duree = Integer.parseInt(form.getDuree());
-            prix = form.getPrix();
+            duree = Integer.parseInt(form.getDuree());// on essai de récuperer la valeur du TextField duree et de la convertir
+            prix = form.getPrix();// on essai de recuperer le prix
         }
-        catch(NumberFormatException e)
+        catch(NumberFormatException e)// si le nombre est mal formatté
         {
             JOptionPane.showMessageDialog(form, "Veuillez entrer un nombre");
-            return;
+            return;// on s'arrete la
         }
         catch(NullPointerException e)// si pas de selection
         {
             JOptionPane.showMessageDialog(form, "Veuillez selectionner un prix");
-            return;
+            return;// on s'arrete la
         }
-        JOptionPane.showMessageDialog(form, "Prix total de l'appel : " + (duree * prix));
-        form.dispose();
+        JOptionPane.showMessageDialog(form, "Prix total de l'appel : " + (duree * prix));// on affiche le resultat final
+        form.dispose();// on ferme et detruit la fenetre, ce qui va arreter le programme
+        // sans le dispose, le programme continuera de tourner en arriere plan
     }
     
 }

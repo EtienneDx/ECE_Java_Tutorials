@@ -17,8 +17,10 @@ public class TP6
      */
     public static void main(String[] args)
     {
-        Q1Form q1 = new Q1Form();
-        q1.setVisible(true);
+        Q1Form q1 = new Q1Form();// on créé le formulaire
+        q1.setVisible(true);// on le rend visible /!\ cette fonction n'est pas bloquante, elle démarre un autre thread
+        // cela signifie qu'une fois le formulaire affiché, la fonction main se termine, et aucun code utilisateur n'est utilisé
+        // jusqu'a l'appel d'un Action Listener (appelk fait automatiquement par java)
     }
     
 }

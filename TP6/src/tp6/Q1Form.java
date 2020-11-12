@@ -17,18 +17,18 @@ public class Q1Form extends javax.swing.JFrame
      */
     public Q1Form()
     {
-        initComponents();
-        validate.addActionListener(new ButtonActionListener(this));
+        initComponents();// on genere les composants (avec le code auto-generé en bas du fichier)
+        validate.addActionListener(new ButtonActionListener(this));// on ajoute un action listener
     }
     
     public String getDuree()
     {
-        return duree.getText();
+        return duree.getText();// on recup le text
     }
     
     public double getPrix() throws NullPointerException// si pas de selection, une erreur est envoyée
     {
-        return Double.parseDouble(buttonGroup.getSelection().getActionCommand());
+        return Double.parseDouble(buttonGroup.getSelection().getActionCommand());// les actions commands ont été définis dans l'editeur visuel (netbeans)
     }
 
     /**
